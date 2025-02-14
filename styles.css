@@ -1,0 +1,135 @@
+﻿/* Pulse Animation */
+@keyframes pulse {
+	0% { opacity: 0.8; text-shadow: 0 0 10px rgba(255, 102, 178, 0.6); }
+	100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 102, 178, 0.9); }
+}
+
+/* Pulse Border Animation */
+@keyframes pulse-border {
+	0% { opacity: 0.8; box-shadow: 0 0 8px rgba(255, 102, 178, 0.4); }
+	100% { opacity: 1; box-shadow: 0 0 15px rgba(255, 102, 178, 0.8); }
+}
+
+/* Pushes footer to the bottom even with little content */
+#content {
+    flex-grow: 1;
+	margin: 60px;
+}
+
+/* Ensure full-page black background, even when scrolling */
+html, body {
+    min-height: 100vh; /* Ensures it covers the full viewport height */
+    height: auto; /* Allows content to expand beyond viewport */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #0d0d0d;
+}
+
+/* Body */
+body {
+	color: #aaa;
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+}
+
+/* Header */
+h1 {
+	font-size: 3em;
+	margin: 20px;
+	color: #ff66b2; /* Sakura pink */
+	text-shadow: 0 0 15px rgba(255, 102, 178, 0.6); /* Glowing effect */
+	display: inline-block;
+	animation: pulse 3s infinite alternate;
+}
+
+h2 {
+	color: #ccc;
+    font-size: 1.8em;
+    text-shadow: 0 0 12px rgba(255, 102, 178, 0.7);
+    font-weight: bold;
+    animation: pulse 3s infinite alternate;
+}
+
+/* Navigation */
+.nav {
+	text-align: center;
+	padding: 15px;
+	background-color: #222;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.nav a {
+	color: #ff66b2;
+	text-decoration: none;
+	font-size: 1.2em;
+	opacity: 0.8;
+	margin: 0 15px;
+	transition: color 0.3s ease-in-out;
+	animation: pulse 3s infinite alternate; /* Unified pulsing effect */
+}
+
+.nav a:hover {
+	color: #eee;
+	text-shadow: 0 0 10px #ff66b2;
+	text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: right;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+}
+
+/* Highlighted Text */
+.highlight {
+	color: #ff66b2;
+	font-weight: bold;
+	animation: pulse 3s infinite alternate; /* Pulsing effect */
+}
+
+/* Blog Post Container (Glowing Content Box) */
+.content-box {
+    background: #111; /* Slightly lighter than main background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    margin: 30px auto;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid #ff66b2;
+    animation: pulse-border 3s infinite alternate;
+}
+
+/* Blog Title */
+.blog-title {
+    font-size: 1.8em;
+    color: #ff66b2;
+    text-shadow: 0 0 12px rgba(255, 102, 178, 0.7);
+    font-weight: bold;
+    margin-bottom: 5px;
+    animation: pulse 3s infinite alternate;
+}
+
+/* Blog Date */
+.blog-date {
+    font-size: 1em;
+    color: #ccc;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* Blog Content */
+.blog-content {
+    color: #ddd;
+    text-align: justify;
+    max-width: 700px;
+    margin: auto;
+}
