@@ -160,6 +160,11 @@ h2 {
         overflow: hidden;
     }
 
+	h2 {
+        font-size: 1.5em;
+        margin: 10px;
+    }
+
     .nav {
         padding: 8px;
     }
