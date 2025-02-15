@@ -24,7 +24,7 @@
                 const formattedContent = parseBlogFormatting(post.content);
 
                 postElement.innerHTML = `
-                    <h2 class="blog-title">📝 ${post.title}</h2>
+                    <h2>📝 ${post.title}</h2>
                     <p class="blog-date">📅 ${formattedDate}</p>
                     <div class="blog-content">${formattedContent}</div>
                 `;
