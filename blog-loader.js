@@ -37,11 +37,12 @@
 
 // Function to parse simple formatting (newlines, bold, italics)
 function parseBlogFormatting(text) {
-    // Convert **bold** to <strong>
-    text = text.replace(/\*\*(.*?)\*\*/g, '<span class="highlight">$1</span>');
 
-    // Convert *italic* to <em>
-    text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    // Convert *bold* to <strong>
+    text = text.replace(/\*(.*?)\*/g, '<strong>$1</strong>');
+
+    // Convert _italic_ to <em>
+    text = text.replace(/_(.*?)_/g, '<em>$1</em>');
 
     // Convert double newlines to paragraph breaks
     text = text.replace(/\n\s*\n/g, '</p><p>');
@@ -49,4 +50,3 @@ function parseBlogFormatting(text) {
     // Wrap text in paragraphs if not already wrapped
     return `<p>${text}</p>`;
 }
-
