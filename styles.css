@@ -13,8 +13,8 @@
 
 html, body {
     min-height: 100vh;
-	overflow-x: hidden; /* Prevents any horizontal scrolling */
-    width: 100%;
+    overflow-x: hidden; /* Prevents any horizontal scrolling */
+    width: 100vw; /* Ensures full viewport width */
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,7 +23,9 @@ html, body {
     color: #aaa;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
+    box-sizing: border-box;
 }
+
 
 /* Ensures footer is pushed to the bottom */
 #content {
@@ -99,10 +101,11 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
-    width: 100%;
+    width: calc(100% - 40px); /* Keeps a small margin but ensures full width */
     margin: 30px auto;
     border: 2px solid #ff66b2;
     animation: pulse-border 3s infinite alternate;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 
 .blog-title {
@@ -132,17 +135,20 @@ h2 {
 /* === RESPONSIVE DESIGN === */
 
 /* 📱 MOBILE (Up to 768px) */
+
 @media (max-width: 768px) {
 	body {
         padding-top: 25px; /* Adjusts for smaller screens */
     }
 
     #content {
-        margin: 20px;
+        margin: 20px auto; /* Ensures full centering */
+        width: calc(100% - 20px); /* Prevents shifting */
+        text-align: center;
     }
 
     .content-box {
-        width: 100%;
+         width: calc(100% - 20px);
         max-width: none;
         padding: 10px;
     }
