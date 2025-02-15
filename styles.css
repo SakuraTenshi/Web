@@ -86,8 +86,8 @@ h2 {
 
 /* === FOOTER === */
 .footer {
-    text-align: right;
-    padding: 15px;
+    text-align: center;
+    padding: 10px;
     font-size: 0.9em;
 }
 
@@ -157,11 +157,6 @@ h2 {
     .nav a {
         font-size: 1em;
         margin: 5px;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 10px;
     }
 }
 
