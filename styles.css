@@ -13,6 +13,8 @@
 
 html, body {
     min-height: 100vh;
+	overflow-x: hidden; /* Prevents any horizontal scrolling */
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -146,8 +148,10 @@ h2 {
     }
 
     h1 {
-        font-size: 2.2em;
+        font-size: 2em;
         margin: 10px;
+		white-space: nowrap; /* Prevent excessive wrapping */
+        overflow: hidden;
     }
 
     .nav {
