@@ -133,3 +133,40 @@ h2 {
     max-width: 700px;
     margin: auto;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Ensure content uses the full width of the screen */
+    #content {
+        margin: 20px; /* Reduce margin to use more space */
+    }
+
+    /* Make sure blog post containers fill the screen properly */
+    .content-box {
+        width: 95%; /* Increase width on smaller screens */
+        max-width: none; /* Remove fixed max-width constraint */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Make the header text smaller for mobile */
+    h1 {
+        font-size: 2.2em; /* Reduce size on small screens */
+        margin: 10px;
+    }
+
+    /* Adjust navigation for better mobile view */
+    .nav {
+        padding: 10px;
+    }
+
+    .nav a {
+        font-size: 1em; /* Reduce font size for nav links */
+        margin: 0 8px; /* Adjust spacing */
+    }
+
+    /* Make footer text centered on mobile */
+    .footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
